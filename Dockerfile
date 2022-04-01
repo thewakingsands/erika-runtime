@@ -10,6 +10,7 @@ RUN apt-get update && \
   make && \
   make install && \
   echo "extension=SeasClick.so" > /etc/php/8.1/mods-available/seasclick.ini && \
+  touch /var/lib/php/modules/8.1/registry/seasclick && \ 
   apt-get remove -y php8.1-dev && \
   apt-get auto-remove -y && \
   apt-get clean -y && \
